@@ -3,12 +3,15 @@
   <head>
     <title>Technical Task 3</title>
     <link rel="stylesheet" href=""/>
-    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/node_modules/angular-recaptcha/release/angular-recaptcha.min.js"></script>
     <script src="/index.js"></script>
   </head>
   <body ng-controller="mainController">
     <div>
-      <input type="text" ng-model="text"> <button ng-click="send(text)">Send</button>
+      <input type="text" ng-model="text">
+      <div vc-recaptcha key="'6LcET5UUAAAAAP1WitHLW_tgDmhkkuvNEiliZNuE'" ng-model="recaptcha"></div>
+      <button ng-click="send(text)">Send</button>
     </div>
     <p>{{data}}</p>
   </body>
